@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu \
     && pip3 install streamlit ultralytics transformers deep-translator \
-    && git clone https://github.com/ItsNotRohit02/Deploying-AI-Enabled-ISL.git . \
+    && git clone https://github.com/ItsNotRohit02/Deploying-AI-Enabled-ISL.git .
 
 RUN cd models/ \
     && wget -O ISL-ViTImageClassification.pth https://huggingface.co/ItsNotRohit/ISL-Models/resolve/main/ISL-ViTImageClassification.pth?download=true \
