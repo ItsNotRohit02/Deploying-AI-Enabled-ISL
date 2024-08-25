@@ -4,7 +4,8 @@ import numpy as np
 from PIL import Image
 import torch
 from torchvision import transforms
-from transformers import ViTFeatureExtractor, ViTForImageClassification, BarkModel, AutoProcessor
+from transformers import ViTForImageClassification, BarkModel, AutoProcessor
+
 from ultralytics import YOLO
 from deep_translator import GoogleTranslator
 import scipy.io.wavfile
