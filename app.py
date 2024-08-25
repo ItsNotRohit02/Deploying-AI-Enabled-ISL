@@ -72,8 +72,15 @@ st.header("Classification of Sign")
 
 img_file_buffer = st.camera_input("**Capture an image**")
 
-if img_file_buffer is not None:
+uploaded_file = st.file_uploader("Or upload an image", type=["jpg", "jpeg", "png"])
+
+input_image = None
+if img_file_buffer:
     input_image = Image.open(img_file_buffer).convert('RGB')
+elif uploaded_file:
+    input_image = Image.open(uploaded_file).convert('RGB')
+
+if input_image is not None:
     input_image_cv2 = np.array(input_image)
     input_image_cv2 = cv2.cvtColor(input_image_cv2, cv2.COLOR_RGB2BGR)
 
