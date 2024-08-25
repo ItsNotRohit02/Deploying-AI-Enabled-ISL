@@ -72,7 +72,7 @@ st.header("Classification of Sign")
 
 img_file_buffer = st.camera_input("**Capture an image**")
 
-uploaded_file = st.file_uploader("Or upload an image", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("**Or upload an image**", type=["jpg", "jpeg", "png"])
 
 input_image = None
 if img_file_buffer:
